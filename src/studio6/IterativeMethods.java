@@ -13,11 +13,17 @@ public class IterativeMethods {
 	 *         ...)
 	 */
 	public static double geometricSum(int n) {
-		double sum = 0.0;
+		/*double sum = 0.0;
 		for (int power = 1; power <= n; ++power) {
 			sum = sum + Math.pow(0.5, power);
 		}
-		return sum;
+		return sum;*/
+		
+		if (n == 0) {
+			return 0;
+		} else {
+			return geometricSum(n - 1) + 1.0 / Math.pow(2, n);  
+		}
 	}
 
 	/**
